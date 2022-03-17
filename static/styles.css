@@ -1,0 +1,9 @@
+.board{
+border: solid;
+}
+
+td{
+    border: solid;
+    font-size: 4rem;
+    
+}
