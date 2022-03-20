@@ -21,10 +21,37 @@
                 {% endfor %}
             </tbody>
         </table>
-        <form action="">
-            <input type="text" placeholder="Enter a guess">
-            <button>Submit</button>
-        </form>
+
+        <p>High Score: 
+            <b>{{ highscore }}</b> 
+            in {{ nplays }} plays
+        </p>
+    
+        <p>
+            Score: <b class="score">0</b>
+            Seconds Left: <b class="timer"></b>
+        </p>
+
+        <form method="POST" class="add-word">
+            <input name="word" class="word" autofocus>
+            <button>Enter</button>
+          </form>
+
+
+        <p class="msg">
+            
+        </p>
+    
+        <ul class="words">
+            
+        </ul>
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/static/app.js"></script>
+    <script>
+        let game = new BoggleGame("boggle", 60);
+    </script>
 </body>
 </html>
